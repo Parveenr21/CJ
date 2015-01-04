@@ -1,0 +1,68 @@
+ACCESS SPECIFIERS at class level (only PUBLIC, default, final and abstract)
+
+
+nothing like protected and private..
+
+1. public Class with public Construcor  (objects can be created at both with in package and outside package).
+2. public Class with protected Construcor (Objects can not be created at diff package.. only overridding can happen)
+
+3. Public class with default constructor (here outside package.. no object of this class and even can not create child of this.. as child construcor will not be 
+able to call this class constructor..) so only..within package ..this class can be accessed.
+
+4. public class with private construcor .. no class can create object of this class..because will not be able to call its construtor from anywhere outside class.
+
+
+so how to create object of this class...so here we create a public or protected method of this classs.. with in which we create object of the same class...
+
+its called static factory patterd.. where a static method of a class is used to create or simply call private constructor of a class.
+Singleton can also belong to this category.
+
+
+
+
+
+A class can only be Public or default
+//public class means can be accessed .. either by extending or by creating object(calling constructor) OUTSIDE THE class PACKAGE as well.
+//default class means .. can be accessed with in the same package..
+
+
+//public constructor means . class object can be made outside class package.
+//protected construcor means.. class object can NOT be made outside class package.. but when this class get extended by outside package class..
+then also this constructor will be called by super()..
+
+so protected constructor means.. we dont want to create object of a class but by extending this protected constructor public class.
+we just want child class objects to be called where the child class constructor should be able to call parent class constructor of other package. 
+
+
+
+PLease note 
+
+
+1......
+
+//for creating object of a class in diff package  -- THEN Other PACKAGE class is made public as well as constructor should also be made public ...
+Its must .. if we want to make use of a class in another package then the constructor and class both should be public..
+
+because if class is public we can create references of that class and only when constructor is public then we can created object of that class.
+
+
+
+
+2........
+
+//for extending a class  object of a class in diff package  -- THEN Other PACKAGE class is made public 
+while construcor should be protected..when we dont want to allow the object of this class to be created in new class.
+
+as the class will be extended but the object can not be created as the constructor is protected..
+which means we can onlu created child objects which while creation call the super class constructor of diff package....
+
+so simply protected construcor..is for INHERITANCE.. when child objects wil be created..
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,234 @@
+concurrency is execution of multiple tasks at one time and almost all the applications are concurrent now a days
+like media player,winword, snakes games
+
+This is implemented by threading in java
+
+1. Process -- program in execution..a process runs in its own memory space..and sometimes a process or program in execution
+nees to get data from some other process then we have 2 mechanism for this.
+IPC and Shared memory.. where one process can share data with other process
+
+2. Threads -- LWP lightweightprocess .threads share memory space of a process.. it was introduced because when 2 processes of
+same application needs too much data sharing or simple too much IPC calls then scientist invented this threading mechanism
+so that we can have data sharing within one processes.
+Every process has at least one. Threads share the process's resources, including memory and open files.
+
+
+There are some application which also have multiple processes running.
+
+e.g chrome .. as old browswers were designed for  little content so the IPC among the differnt content within one browser 
+was limited so they ran as diff threads with in one process.. if 1 thread gets hung then browser process gets hung
+but chrome is designed as  diff process so if there is some un responsiveness in one process.. it does not effect 
+another process.  
+
+ 
+
+To achieve threading in java we have two ways
+1. Extends thread class.. create object of your class and call the start method.
+2. implement the Runnable interface by the class and create object of it and pass this object to constructor of
+thread class as a registration process, and then call the start method from that Thread class object.
+
+
+it gives a run method where we write our code.. and this method is called by Runnable interface only because
+we only call the Start() method from our code and internally this RI contract calls the run() method.
+
+
+
+
+
+1. native methods are OSes method.. Thread class has 80% methods as native. so can throw interrupted exception..
+which could be because of OS process. its interview QNS
+
+2. Can we run the run() method directly .. yes.. but this will not be multi threading..
+it will be treated as normal methods.. parallel execution will not be there.. once first thread object run method will
+be executed then only the next instruction will be executed.
+and these thread classes object will run the run method in the single thread.
+
+
+Association
+Aggregation
+Generalization
+
+JOIN in threads
+
+t1.join written inside running thread t2 means.. t2 will start execution only when t1 gets executed completly.
+so it could be used to maintain the concept like parent can not end before child .. if child join parent thread.
+
+for better sync we have synchronization concept. join also throws InterruptedException as method from OS.
+
+
+Green threads... These are threads which have functionality implemntation done by JVM and they do not depend on native
+thread method implementation.
+
+So JAVA has discarded the concept of green threads in java 1.1 onwards. Green threads model does not exist anymore.
+
+
+Parent Child Thread .
+
+If Parent thread gets killed then child thread keeps on continuing unlike before jdk 1.2.
+
+SYNCHRONIZATION:---
+
+if a data has to be shared between multiple threads then it should be in some synchronized way else data will get corrupted.
+
+generally in distributed apps
+
+Race condition:-- It is a flaw in os/software where the execution of program statement in random order results in uncontrolled or 
+unintended results. which generally happens in case of threading..
+
+Critical section:-- This is a part of code which is supposed to be executed by one thread at a time in whole.Once it is getting executed
+by a thread, no other thread can get access to it.
+
+classic example:- 2 ppl depositing money in same account but the (1000+200) + 200 got resulted in 1000+ 200 and again1000 + 200
+
+to resolve this we have synchronization concept.
+
+
+
+
+
+** when this thread.sleep() comes through the java then it goes to OS .. and then os simply switches back to 
+other thread ..it is handled by OS.. OS treats this just as a normal thread.
+
+
+
+
+
+
+
+
+The Java programming language provides two basic synchronization idioms: synchronized methods and synchronized statements.
+
+Synchronization give solution to race condition
+
+
+
+Synchornization blocks or methods injava helps in context switching as it is implemented with the purpose of sharing
+
+like diff process shared data with IPC or shared memory.
+
+******SHARING simply means a single object will be shared between different Threads objects..*******
+
+
+
+
+1. synchronized method:-----
+
+if we have a piece of code and we want it to become CS then we make that function synchronized so when one thread object will access this
+then it get an exclusive lock of it which is called MONITOR.
+
+e..g
+
+public static synchronized int foo(Thread reference){
+
+t1.getname();
+
+return 1;
+}
+
+
+This synchronized method will be with in the shared object/class  while if we have to put  synchronization
+stuff with in the thread extending or implementing class then we go with synchronized blocks or statements  
+
+
+2. synchronized block or statements
+
+synchronized(Objectreference)
+{
+
+}
+ 
+
+
+
+
+
+
+If we have 2 synchronized static or non static methods in the same class and different threads are executing these.. then also 
+
+one thread will complete execution of both the methods .. and then another thread will execute..
+one class methods will be executed only by one threads if these called methods are synchronized.
+
+
+this is valid for static static or non static non static methods..
+
+while static and non static syn methods can run in parallel
+
+so only for unsynchronized methods.. different threads can run many unsynchronized methods in parallel
+but for many diff synchronized methods.. object gets a lock so only one thread will run one synchronized..
+and we can sure that if one synchronized method is running at one time then we can never have another synchronized method
+running at the same time.
+
+
+
+SUSPEND and RESUME methods (both are deprecated methods)
+
+
+suspend method is used to send a thread to blocked pool from where only another thread can put that suspended thread to runnable pool
+only be executing resume method to that thread.
+
+****Deadlock- Part 1****
+
+ case could occur here if the suspend method is invoked on a thread if it enters into CS 
+which is in synchronized method or block.. because in case on non synchronized method or block..if one thread gets to suspend 
+state then other thread can acess that method or block.. becoz method is not synchronized.. so there wont be any deadlock
+
+but in case on synchronized block/methods.. other threads can not access that until the suspended thread gets resumed..
+
+
+
+
+RESOlution for this issue is 
+
+
+we have 2 methods from object class
+
+
+
+wait() .. similar to suspend() deprecated method... it will move back the current thread to blocked pool just like suspend method
+but it also release lock from current object.
+so then when another thread will come by having the lock as lock is free and it will call synchronized method and once its execution 
+is done then it will call notify method on the wait() thread to continue its operation.
+notify() is manual function calling when ever we want to invoke the blocked thread we calls it.
+
+
+BUT REMEMBER this all is for synchronized methods.. for non synchronized methods we don't need this wait() and notify()
+methods.
+This wait and notify if use in general sense.. we get illegal monitor exception... so never try to use
+these wait and notify in run method.
+
+TIPPPP-- keep run method simple. and common to all the threads..with in the run mehod..call synchronized method of shared class.
+
+
+ 
+
+notify() ...  and notifyall()
+notify wake up the only first fifo thread from blocked pool to runnable pool
+notify all wake up all the fifo thread  from blocked pool to runnable pool
+
+
+****Deadlock- Part 2****
+
+AS suspend() and resume() methods are not used, instead wait() and notify() are used..
+here also we have DEADLOCK situation..(when we get multiple shared object locks.)
+
+
+
+
+
+Interrupting Thread:---
+
+
+earlier we used to have a method. stop() .. which we used to run on a thread.. which would forcefully stop a Thread..but now it is deprecated..
+
+
+now we can no longer force a thread to be terminated..however we can send a request to terminate a thread..by
+
+the INTERRUPT method.
+
+when interrupt() method is run on a thread..then its interrupted status is set.
+Every thread occasionaly check its interrupted status by running isinterrupted() method on it own.. to see if it was interrupted
+by any other thread..
+
+There comes a catch.. if a thread is in blocked pool and it runs is interrupted method on it.. then interrupted exception comes.
+
+isinterrupted() method calls on blocked thread.

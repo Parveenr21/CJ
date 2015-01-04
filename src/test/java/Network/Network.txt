@@ -1,0 +1,116 @@
+Networking is when two computers or programs communicate over network. It could be on a same machine 2 programs are communicating but
+they must be using N/W communication.
+
+To establish a communication ..the SENDER must know the address the RECEIVER.
+
+ITs IP address where sender has to send the data ..now at DESTINATION IP address the intended message is received..but there are several 
+applicatin that are listening to request ..so how come DESTINATION or receiver know that for which applicaion or service this message 
+has come..so .. we have a PORT number..
+
+
+SENDER needs IP addres and PORT no. to send the message to RECEIVER.
+
+
+Now its sender wish which APPLICATION layer protocol it has to use..
+
+so to establish a communication sender needs  
+
+1. APPLICATION LAYER PROTOCOL
+2. IP ADDRESS OR HOSTNAME
+3. PORT NUMBER
+
+IPv4 -- 4bytes , IPv6 6 bytes
+
+Port Number 2 bytes .  means 1- 65****
+
+ 1 till 1023 port numbers are reserved for system or daemon processes.
+we can run server or services at only  port number after 1023.
+
+A SERVER RUUNING AT PORT 8080 MEANS..this does not mean that process is running at 8080.. process does not run at port..
+It means ..it is listening at 8080.. or more precisely..It will accept any communication which is received at port 8080.
+
+now at client side. a program which is sending data over N/W .. always get new ports..
+
+as there could be many client or same client sending request to a server..
+
+so each client request gets new port number every time..
+
+so as we have limited number of ports available..
+so obviously we can send this limited no. of request to server from a client..
+
+or local machine or OS will invalidate the ports request and free the port in FIFO order..
+
+
+
+
+
+SOCKET:--- 
+
+To have a communication established between 2 parties or programs
+
+A party can send a request or receive it.
+If both party are communicating with each other..then its peer to peer..
+It could be n no. of parties communication in full duplex ways.
+Client server is little modified ways..
+when A party sends request to get some info while party B only serves the request..then it is called client server relationship.
+
+
+Socket is party A or B.
+It is an end point of communication. 
+
+A socket means end point with 3 info.(APP PROTOCOL name + PORT NUMBER + IP ADDRESS)
+so we have client socket and server socket.
+
+so to create 
+
+a server socket or server program ..we need to create instance of SERVERSOCKET class and it accepts a parameter INT
+which is port number..on which this socket will be listening.
+
+
+a client socket or client program ..create instance of SOCKET class which will accept two args. string IP address (server IP)
+ and INT which is port number to which it has to send the request.
+ 
+ 
+Now as we create client socket ..
+//Socket sc = new Socket("localhost", 1254);
+
+this return a reference of client socket in sc and also pass this reference on N/W to server program too.
+
+where it is catched by
+
+//ServerSocket ss = new ServerSocket(1254); It create server socket and It blocks the port...
+
+//socket sc=s.accept(); this waits for client socket reference to come ..
+
+and once It gets the clinet request..it also get the clinet socket reference and now we can access any thing of client.
+
+
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+Its responisibility of Transport layer to identify the destination over N/W and whatever ways..means either TCP/UDP way
+
+and IP address+protocol+portnumber is given to transport layer by applicaion layer.
+
+
+now TCP:-- Its connection orieneted.. to establish comm. in tcp ways..a dedicated conn is required b/w clinet and server..
+			like what we are doing in our programs.. It works on ack basis.
+			
+UDP: ---  its user datagram protocol.. unreliable..no dedicated conn is required.. here the packet ordering of sending can be 
+			different than receiving ordering..here 5-10% error is there in any communication.
+			   
+			   
+			   
+			   UDP way communication programming can also be done..
+
+ 
+
+
+
+
+
+
+
+  
+
+

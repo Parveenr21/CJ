@@ -1,0 +1,142 @@
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+Directory is a file which contains other file simply.
+
+Java's way to crate file or directory
+
+public static void main(String args[]) {
+      String dirname = "/tmp/user/java/bin";
+      File d = new File(dirname);
+      // Create directory now.
+      d.mkdirs();
+  }
+
+A directory is a File which can contains a list of other files and directories. Y
+ou use File object to create directories, to list down files available in a directory. 
+
+
+File foo1 - new File("D:\\tempo\\tempi\ssss.txt")
+
+foo1.createNewFile();
+
+For creation of a file.. the directory path must exist.. till the directory where this lycos.txt needs to be created.
+
+
+both mkdirs() and createNewFile()  returns true for succesful creation.
+
+NOTE!!!!!!!!!!  already existing files and directories will not be overwritten 
+and timestamp too will not be changed..which is unlike touch command which also do not update the existing file but update timestamp.
+
+To see the listing of a directory
+
+		// array of files and directory
+         String []paths = file.list();
+            
+         // for each name in the path array
+         for(String path:paths)
+         {
+            // prints filename and directory name
+            System.out.println(path);
+         }	
+
+Verifying Properties of a File/Directory
+public boolean exists()       // Tests if this file/directory exists.
+public long length()          // Returns the length of this file.
+public boolean isDirectory()  // Tests if this instance is a directory.
+public boolean isFile()       // Tests if this instance is a file.
+public boolean canRead()      // Tests if this file is readable.
+public boolean canWrite()     // Tests if this file is writable.
+public boolean delete()       // Deletes this file/directory.
+public void deleteOnExit()    // Deletes this file/directory when the program terminates.
+public boolean renameTo(File dest) // Renames this file.
+public boolean mkdir()        // Makes (Creates) this directory.
+List Directory
+For a directory, you can use the following methods to list its contents:
+public String[] list()     // List the contents of this directory in a String-array
+public File[] listFiles()  // List the contents of this directory in a File-array
+Example: The following program recursively lists the contents of a given directory (similar to Unix's "ls -r" command).
+
+
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+
+Stream is a buffer memeory .. area in RAM.. which is having data ..It could be reading stream or writing stream
+
+Reading stream will take the data from our program and it will be used by other device/Stream which connect to this.
+
+While Writing stream will get the data which we pass in the stream and it will write it where we connect this.
+
+
+
+Now we just have to connect to these streams from our program and the another end point..
+
+READing stream:-- reading data from one point and then it is traveling to another end point to use to stream and read the data.
+
+Writing stream:-- reading the data from one point and then traveling to another point and writing it there. 
+
+
+There are 2 kinds of Streams
+
+1. Byte Streams: It use to read/write to and from the stream in byte-byte ways. which is of 8 bits..or simply ascii way..
+				This means a file with 256 bytes will have 32 stream of 8 bits each to transport this data.
+				
+				Drawback.. Other language chars are not supported as some chars needs more than 8 bits i,.e unicode characters.
+				
+				
+2. Char Readers:- To overcome the byte stream limited size ..char steam was introduced with stream size of 32 bits of 2 bytes
+
+					here multilingual chars can be transported too.
+					
+					
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+					Byte Stream has top 2 most imp class which are abstract with one default method..
+					
+					InputStream   - has		int read() 
+					OutputStream  - has 	void write(int)
+					
+					so all classes inheriting these 2  classes would get these read and write methods.
+					
+					
+					
+					
+					Char Reader too has two top most class which are abstract as well
+					
+					Reader		int read()
+					Writer		void write(int)
+					
+					so all the char reader classes will inherit this reader and writer steams will get read and write methods
+					
+					
+					
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-			
+
+ByteStream type has--> InputStream and OutputStream classes
+Char Reader has-->Reader and Writer  classes
+
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
