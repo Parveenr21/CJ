@@ -24,6 +24,10 @@ abstract public class Abstractcla {
 	 * 
 	 * static methods can not be abstract.
 	 * 
+	 * 	//abstract public static void abstrstaticmethod(); static method can not be abstract..
+				//as static method can be called by class name so we can not have abstract static method
+
+	 * 
 	 * Abstract methods could be in Abstract classes or Interfaces only.
 	 * 
 	 * 
