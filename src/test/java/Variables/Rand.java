@@ -9,8 +9,8 @@ public static void main(String ...ccc)
 {
 	
 	double rand=Math.random()*10000000;
-	Double d=new Double(rand);
-int rand1=d.intValue();
+	Double d=new Double();
+	int rand1=((Object) d).intValue();
 	System.out.println("no is "+rand1);
 	
 	String ss="p"+rand1;
