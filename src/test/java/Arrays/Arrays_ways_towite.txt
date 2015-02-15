@@ -1,0 +1,7 @@
+int kk[];
+		kk=new int[]{1,2,1,1,2,1,2,1,1,2};
+		
+		int kkk[]={4,5,5};
+		
+		int kkkk[];
+		kkkk= new int[4];
