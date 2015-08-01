@@ -1,5 +1,8 @@
 package Variables;
-class Double {
+
+class Doubleeeeee {
+	
+	
 	public static void main(String args[]) {
 	float pi, r, a;
 	r = (float) 10.8; // radius of circle

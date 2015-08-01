@@ -15,8 +15,9 @@ public class WrapperClass {
 
 		Character C = 'c';
 		Integer I = 10;
-		Double D = 10.9d;
-
+		
+		Double D= new Double(d);
+		
 		String sc = Character.toString(C); // for characte to string.. we pass
 											// this Character class
 
@@ -27,7 +28,9 @@ public class WrapperClass {
 		String s2 = Byte.toString(b);
 		byte b = Byte.parseByte(s2);
 
-		String s3 = Double.toString(d);
+		
+		
+		String s3 = D.toString();
 		double d = Double.parseDouble(s3);
 
 		System.out.println(s1);

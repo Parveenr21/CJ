@@ -17,10 +17,8 @@ class ArraysSample{
 		//sort logic
 		int i=0;
 		
-		int kk[];
-		kk=new int[]{1,2,1,1,2,1,2,1,1,2};
 		
-		int kkk[]={4,5,5};
+		
 		
 		//x= x+y;
 		

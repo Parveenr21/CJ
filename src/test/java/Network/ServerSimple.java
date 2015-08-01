@@ -21,7 +21,7 @@ DataOutputStream dos = new DataOutputStream (s1out);
 
 
 // Send a string!
-//dos.writeUTF(“Hi there”);
+//dos.writeUTF("Hi there");
 // Close the connection, but not the server socket
 dos.close();
 s1out.close();

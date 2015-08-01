@@ -2,15 +2,17 @@ package Variables;
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
 
-public class Rand
+public class RandomNumbers
 {
 
 public static void main(String ...ccc)
 {
 	
-	double rand=Math.random()*10000000;
-	Double d=new Double();
-	int rand1=((Object) d).intValue();
+	double rand1=Math.random()*10000000;
+	
+	
+	
+	
 	System.out.println("no is "+rand1);
 	
 	String ss="p"+rand1;

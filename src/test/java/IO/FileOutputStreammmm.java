@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
-public class FileOutputStream {
+public class FileOutputStreammmm {
 
 	
 	public static void main(String ...dd) throws FileNotFoundException

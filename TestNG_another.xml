@@ -7,7 +7,7 @@
 
 
 	<test name="InsertionClasses testing" preserve-order="true">
-		<parameter name="browser" value="ff" />
+		<parameter name="browser" value="SPARTAN" />
 		<classes>
 			<class name="pack_testNG.Methodrun_testNG" />
 
