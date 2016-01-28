@@ -3,8 +3,9 @@ package pack_testNG;
 
 import org.junit.Test;
 
-//THIS ANNOTATION FOR TEST CLASS IS POVIDED IN JUNIT 4.11..othere wise ..random execution is there..
-	//@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+//Junit 4.11 ahead we have the method sorting order
+
+//@FixMethodOrder(MethodSorters.NAME_ASCENDING)
  
 
 public class methodrun_Junit{

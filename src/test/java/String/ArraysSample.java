@@ -8,8 +8,12 @@ class ArraysSample{
 	
 	static int x= 5;
 	static int y=18;
-	//x = x+y; this is invalid statement here in class level..as this is useless
 	
+	
+	//static int z=x+y;    this is valid as Z is getting value of x+y
+	//z=x+y this is also valid
+	//z =z+x this is invalid as at class level z can not get z value.. logically incorrect.
+	  
 	
 	public static int[] sort(int a[])
 	{
@@ -76,7 +80,7 @@ class ArraysSample{
 	
 		z = new int[k];
 		
-	z=sort(new int[]{111,500,10,155}); //See the anonymous does not have any name.. its just memory allocation with new 
+	z=sort(new int[]{111,500,1000,155}); //See the anonymous does not have any name.. its just memory allocation with new 
 	
 	
 	for (i=0;i<k;i++)

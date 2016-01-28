@@ -29,6 +29,7 @@ class enum1{
 
 		System.out.println(enm1.Apple);
 
+		
 		String fruit = enm1.Apple.name();
 		String fruit1= enm1.Apple.toString();	//enum type variable can be converted to string or any other data type
 

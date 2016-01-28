@@ -2,7 +2,7 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment>Favorite Things</comment>
-<entry key="favoriteContinent">Antarctica</entry>
-<entry key="favoriteAnimal">marmot</entry>
+<entry key="SQL">Antarctica</entry>
+<entry key="Mongo">marmot</entry>
 <entry key="favoritePerson">Nicole</entry>
 </properties>

@@ -30,6 +30,8 @@ if (a[i][j]>a[i][j+1])
   }
  }
 
+System.out.println("**"+a.length+"*");
+
  for(i=0;i<a.length;i++)
 {
 for (j=0;j<a[i].length;j++)
