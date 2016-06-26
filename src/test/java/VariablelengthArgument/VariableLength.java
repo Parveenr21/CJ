@@ -25,6 +25,12 @@ public static void fun_variablelength(String c){
 		
 	}
 	
+/*
+ * array is internally used by JVM when creating varargs methods.
+ * method("a", "b", "c"); 
+method(new String[] {"a", "b", "c"});
+ * 
+ */
 	
 	
 	

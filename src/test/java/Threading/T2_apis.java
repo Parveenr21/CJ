@@ -52,7 +52,7 @@ class T2_apis extends Thread{
 		
 		
 	setPriority(MIN_PRIORITY);		//MIN_PRIORITY	is 1 and MAX_PRIORITY is 10 , the default priority is 5
-		
+	System.out.println(	getPriority());
 		System.out.println(	getState());
 		System.out.println(	getThreadGroup());
 		System.out.println(	isAlive());
@@ -73,6 +73,14 @@ class T2_apis extends Thread{
 			e.printStackTrace();
 		}
 		yield();
+		
+		//Yield is for letting JVM--to --OS know if there is any important tthread to run then it can stop the current thread
+		//execution and run the important Threads..and..else it would keep on running this
+		
+		System.out.println("post yield");
+		System.out.println(	"****"+getPriority());
+
+		System.out.println("***"+getName());
 		suspend(); //deprecated
 		stop();	//deprecated
 		resume(); //deprecated

@@ -42,6 +42,13 @@ class T2_join extends Thread{
 		//By putting the below join statement.. the threads tt and tt1 will be guest threads to main .. so main will not be executed till the guest gets executed
 	
 	try {
+		System.out.println("current executing thread is"+currentThread().getName());
+		
+		
+		//As soon as I write the thread.join().. It will command the current thread to stop current thread execution and the
+		//joined thread execution starts and control will return back to current executing thread once all the joined thread execution gets completed
+		
+		
 		tt1.join();
 		tt.join();
 	} catch (InterruptedException e) {

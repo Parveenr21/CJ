@@ -15,9 +15,26 @@ public class DBapi{
     private  final String ConnectionString = "jdbc:oracle:thin:@uadbqa.vip.its.ebay.com:1521:UADB";
     private  final String user = "cstudio_user";
     private  final String pwd = "cstudio_user";
+	static int i=0;
 
+	//STATIC variable  .. will be shared by all threads.. on different or same object.
+	//INSTANCE variable .. will be having unique value.. by all threads..if this class object is single..
+	//but if two threads.. enter in this static method to create object and 2 objeccts get created .then both 
+	//object will get individual instance variable.
     
 
+	/*
+	here also synchronized method can be called by 2 thread simultaneously..if the sync method is in another class
+	and the sync methods calling object of class get created more than one..
+	then it would be like .. multiple threads calling 2 synch methods of 2 objects
+	
+*/
+
+	
+	/*
+	 * OR we can make SYNCH method STATIC.. so multiple objects of class having synchronized..
+	then all objects will share this class level methods.. and the method will act as synchronized ..its a workaround 
+	*/
 
 
 /**
@@ -106,10 +123,10 @@ public class DBapi{
     }*/
 	
     
-    public synchronized void test()
+    public  synchronized void test()
     
     {
-    	int i=0;
+    	//int i=0;
     	while(i<50)
     	{
     		System.out.println(Thread.currentThread().getName() + "  value of i "  + i);

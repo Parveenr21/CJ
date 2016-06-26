@@ -67,6 +67,7 @@ class T1 extends Thread{  //THREADING via INHERITANCE
 	}*/
 	
 		DBapi.Database().test();
+		
 	}
 	
 	
