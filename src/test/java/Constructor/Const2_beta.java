@@ -23,6 +23,10 @@ public class Const2_beta extends BaapConstructor {
 	/*
 	 * 
 	 * Default constructor is implicit if no constructor ..ele we need to provide default also when parameterize is there
+	 * not necessarily.. it depends.. if we create an object using default ..then default will not be provided implicitly by compiler
+	 * so we need to provide default as well.
+	 * 
+	 * 
 	 */
 	
 	Const2_beta(){

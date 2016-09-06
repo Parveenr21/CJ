@@ -20,5 +20,11 @@ public class Beta1 extends Baap1{
 		
 	}
 	
+	 void foo(){
+			
+			System.out.println("Non static method of baap class");
+			
+		}
+	
 	
 }

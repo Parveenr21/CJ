@@ -1,0 +1,193 @@
+Comparabale
+
+Its an interface in java which a class must  implements 
+to  basically for Achieving SORTING ..
+
+
+
+Here we must override compareTo method
+See here the CRUX is .. object sorting..
+whenever we have to compare 2 objects .. we need to know on which property of instance variable of
+object we have to compare 2 objects..that we specify in the 
+
+"compareTo" method
+
+here this.propery-other.property in compareTo method will do ascending sort on property.
+
+It is helpful in performing
+
+Arrays.sort(Object [])
+
+
+
+
+e.g.
+
+public class UserMetaData implements Comparable<UserMetaData>{
+class HDTV implements Comparable<HDTV> {
+
+
+
+@Override
+	public int compareTo(UserMetaData other) {
+
+		//ascending sort
+logger.info("sorting on the basis of TUID asc");
+return this.tuid - other.getTUID();  //-1
+	}
+
+OR
+
+@Override
+	public int compareTo(HDTV tv) {
+ 
+		if (this.getSize() > tv.getSize())
+			return 1;
+		else if (this.getSize() < tv.getSize())
+			return -1;
+		else
+			return 0;
+	}
+
+
+
+######################################################################
+
+Now this overriding compareTo method comparison is fine if we are comparing 2 object reference using
+compareTo method like
+
+
+public class Main {
+	public static void main(String[] args) {
+		HDTV tv1 = new HDTV(55, "Samsung");
+		HDTV tv2 = new HDTV(60, "Sony");
+ 
+		if (tv1.compareTo(tv2) > 0) {
+			System.out.println(tv1.getBrand() + " is better.");
+		} else {
+			System.out.println(tv2.getBrand() + " is better.");
+		}
+	}
+	
+	
+	
+	
+	but if we wants to use equals() method..
+	or want to use Assertequals() which internally uses equals method..
+	then we have to override equals as well.
+	
+	The default equals or 
+	default implementation just simply compares the memory addresses of the objects.
+	
+	although.. eclipse create the stub for us.. but note worthy point here.
+	
+	
+	we have to override equals and hashcode methods.
+	actually when we override equals method we have to override hascode as well.
+	If you override the equals(), you MUST also override hashCode(). Otherwise a violation of the general contract
+	 for Object.hashCode will occur,
+	  which can have unexpected repercussions when your class is in conjunction with
+	   all hash-based collections.
+
+because internally in java
+
+If two objects are equal according to the equals(Object) method, 
+then calling the hashCode method on each of the two objects must produce the same integer result.
+
+We have to maintain this..
+
+
+== this always check the equality on reference.. means both the reference should point to same object.
+which means the SAME object not the same value of object.
+
+while 
+
+equals() //For object ..if we have not overridden equals() method then it is by default == as per object api
+//while for Strings.. its the value comparison and not reference comparison..
+
+if we want to have value comparison of objects..we must override equals method and so the hashcode method.
+
+
+##########################################################################################
+
+
+Comparable interface with compareTo method allows us to compare on one PROPERTY only for comparing objects
+
+If we want to have multiple property comparison then we have COMPARATOR interface.
+and also we can have comparator implementation in all different class
+The class implementing comparator interface must override compare method.
+
+#######################################################################################
+
+DIFFERENCE
+
+
+Comparable provides single sorting sequence. In other words, we can sort the collection on the basis of single element such as id or name or price etc.	
+Comparator provides multiple sorting sequence. In other words, we can sort the collection on the basis of multiple elements such as id, name and price etc.
+
+
+Comparable affects the original class i.e. actual class is modified.
+Comparator doesn't affect the original class i.e. actual class is not modified.
+
+
+
+Comparable provides compareTo() method to sort elements.
+Comparator provides compare() method to sort elements.
+
+
+4) Comparable is found in java.lang package.	
+Comparator is found in java.util package.
+
+	
+Collections.sort(List)					e.g. Arrays.sort(objectArray)
+Collections.sort(List,Comparator) 		e.g Arrays.sort(objectArray, Object of class implementing comparator interface)
+	
+#######################################################################################
+
+When to use Which?
+
+In brief, a class that implements Comparable will be comparable, which means it instances can be compared with each other.
+
+A class that implements Comparator will be used in mainly two situations: 
+1) It can be passed to a sort method, 
+such as Collections.sort() or Arrays.sort(), to allow precise control over the sort order and 
+
+2) It can also be used to control the order of certain data structures, such as sorted sets (e.g. TreeSet) or sorted maps (e.g., TreeMap).
+
+Both TreeSet and TreeMap store elements in sorted order. However, it is the comparator that defines precisely what sorted order means.
+
+#######################################################################################
+
+We can have both implementaion of comparable and comparator in same class
+
+class Dog implements Comparator<Dog>, Comparable<Dog>{
+
+which will leads to have both overiden method in our class
+
+ // Overriding the compareTo method
+   public int compareTo(Dog d){
+      return (this.name).compareTo(d.name);
+   }
+
+   // Overriding the compare method to sort the age 
+   public int compare(Dog d, Dog d1){
+      return d.age - d1.age;
+   }
+   
+   
+   
+   so to use them is like
+   
+         Collections.sort(list);// using comparable ...compareTo method
+         Collections.sort(list, new Dog());  //using comparator ..compare method
+   
+   
+
+
+
+Java 1.8 has got LABMDA expressions for comparison	
+
+
+
+
+

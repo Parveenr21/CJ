@@ -19,6 +19,8 @@ public class ListSet_collection {
 	public static void main(String ...ccc)
 	{
 	List<String> genericList = new ArrayList<String>();
+	
+
 	//SortedSet<String> set = new TreeSet<String>();  ..This can also be used
 	
 	Set<String> genericSet = new HashSet<String>();

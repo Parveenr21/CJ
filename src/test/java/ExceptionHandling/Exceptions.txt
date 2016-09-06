@@ -1,0 +1,61 @@
+
+
+Every exception object should be child of throwable
+which by default is child of object class
+
+
+Throwable has 2 childrens
+
+ERROR
+EXCEPTION
+
+
+We never bother about ERROR as we can not handle those.. like thread death, JVM terminated
+
+WE care about EXCEPTIONS:--
+
+here we have 2 childrens of EXCEPTION
+
+RUN TIME EXCEPTIONS:--These are UNCHECKED exceptions and comes at run-time generally beacuse of user data
+or settings.. compiler does not force your to handle this.
+
+
+OTHER EXCEPTIONS:--These are CHECKED exception and compiler forces you to put a handler here.
+
+
+
+
+Most common exceptions: (Needs to set it in cheked or unchecked)
+
+
+java.lang:
+
+ArithmeticException
+ArrayIndexOutOfBoundsException
+ClassCastException
+ClassNotFoundException
+CloneNotSupportedException
+IllegalArgumentExcepion
+IllegalMonitorStateException
+IllegalThreadStateException
+IndexOutOfBoundsException
+InterruptedException
+NullPointerException
+NumberFormatedException
+java.util:
+
+ConcurrentModificationException
+java.io :
+
+EOFException
+FileNotFoundException
+IOException
+NotSerializableException
+
+
+######################################################################
+
+ClassCastException:-- This is when we try to cast a parent class object into child class object
+
+
+

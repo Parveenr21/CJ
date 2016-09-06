@@ -28,7 +28,14 @@ public class CallingBeta1 {
 		
 		B.foo_beta();
 		B.statfoo_beta();
+	
+	
+		
+		new Beta1().baapmethod1();
+	
 	}
+	
+	
 	
 	
 }

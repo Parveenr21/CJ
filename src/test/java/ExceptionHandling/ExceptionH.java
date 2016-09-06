@@ -50,6 +50,8 @@ class ExceptionH{
 		
 	catch(RuntimeException e){
 		
+		
+		
 		System.out.println("Exception");
 	}
 	
