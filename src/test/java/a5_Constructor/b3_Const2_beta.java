@@ -1,6 +1,6 @@
-package Constructor;
+package a5_Constructor;
 
-public class Const2_beta extends BaapConstructor {
+public class b3_Const2_beta extends b1_BaapConstructor {
 
 	int i;
 	
@@ -29,7 +29,7 @@ public class Const2_beta extends BaapConstructor {
 	 * 
 	 */
 	
-	Const2_beta(){
+	b3_Const2_beta(){
 		
 		i=1000;
 
@@ -44,7 +44,7 @@ public class Const2_beta extends BaapConstructor {
 	 * paramterized constructor if wewant to initiazlize non static datamember dynamically
 	 */
 	
-Const2_beta(int a){
+b3_Const2_beta(int a){
 		super(a);
 	
 	
@@ -56,7 +56,7 @@ Const2_beta(int a){
 
 //we can have a method with the same name as class name.. but it should have a return type else it would be considered as constructor
 
-Const2_beta (int a, String s)
+b3_Const2_beta (int a, String s)
 {
 	i=a;
 	s1=s;
@@ -94,9 +94,9 @@ public static void main(String ...xxx)
 	 */
 	
 	
-new Const2_beta();
-new Const2_beta(10);
-new Const2_beta(10,"JAVA");	
+new b3_Const2_beta();
+new b3_Const2_beta(10);
+new b3_Const2_beta(10,"JAVA");	
 	
 }
 }

@@ -29,8 +29,6 @@ public class IntArrayReverse {
 		for (int i=0;i<(ca1.length)/2;i++ ,j++)
 		{
 			
-			
-
 			ca1[i]=(char) (ca1[i]+ca1[(ca1.length)-j]);
 			
 			

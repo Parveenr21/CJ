@@ -1,4 +1,4 @@
-package Thiskeyword;
+package a3_Thiskeyword;
 
 class this2{
 	
@@ -38,7 +38,7 @@ this2(int a){
 	
 	 System.out.println("Constructor called with value passed   "   + a);
 	 
-	 x=10000;
+	 x=10000;	//setting class variable values here again
 	 y=20000;
 	 System.out.println("value of class variable x and y  "+x+y);
 }
@@ -62,7 +62,7 @@ this2(){
 		 
 	
 		 sta(55);
-		 new this2().nonsta(55);
+		 new this2().nonsta(55);		//firstly constructor calling and setting variables..then calling of nonsta(55)  method
 	
 	}
 	

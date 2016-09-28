@@ -1,6 +1,6 @@
-package Constructor;
+package a5_Constructor;
 
-public class Clas3 {
+public class a3_Clas3 {
 
 	
 	public  void execute(){

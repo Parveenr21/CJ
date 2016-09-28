@@ -48,8 +48,8 @@ public class StringBufferReversal {
 
 		
 		
-		
-		
+		System.out.println(sb);
+		System.out.println(sb.reverse());
 		
 		
 	}

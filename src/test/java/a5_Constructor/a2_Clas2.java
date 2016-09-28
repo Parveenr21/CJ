@@ -1,18 +1,25 @@
-package Constructor;
+package a5_Constructor;
 
-public class Clas2 {
+public class a2_Clas2 {
 
-	static Clas3 c3;
+	static a3_Clas3 c3;
 	
 	
 	//the same thing happens in sys.out.println 
+	
+	/*
+	 * 
+	 * This static block is very much in use here ..as this get called as soon as class get called.
+	 * as we gonna acces c3 variable ..then class got loaded and c3 got initialized..so useful for static variables.
+	 * 
+	 */
 	
 	static{
 		
 		//if we dont instantiate this reference variable then on accessing method with this reference 
 		//will give null pointer exeception
 		
-		c3=new Clas3();
+		c3=new a3_Clas3();
 		
 	}
 	

@@ -1,4 +1,4 @@
-package Variables;
+package a1_Variables;
 
 
 class OpeartorsAssociativity{
@@ -108,7 +108,8 @@ public class Test {
    public static void main(String args[]){
       int a , b;
       a = 10;
-      b = (a == 1) ? 20: 30;
+      b = (a == 1) ? 20: 30;								//here we do not need to write "IF" here ..automatically .. the comparison happens
+      														//actually its a condition..we write "IF" for condition to check.. otherwise   a==1 will return true or false 
       System.out.println( "Value of b is : " +  b );
 
       b = (a == 10) ? 20: 30;
@@ -119,8 +120,6 @@ This would produce following result:
 
 Value of b is : 30
 Value of b is : 20
-
-
 
 
 
@@ -160,7 +159,7 @@ class Dog extends Animal implements Domestic {}
 class Cat extends Animal implements Domestic {}
 Imagine a dog object, created with Object dog = new Dog(), then:
 
-dog instanceof Domestic // true - Dog implements Domestic
+dog instanceof Domestic // true - Dog implements Domestic			//instance of will return true for all the parent class and Interfaces
 dog instanceof Animal   // true - Dog extends Animal
 dog instanceof Dog      // true - Dog is Dog
 dog instanceof Object   // true - Object is

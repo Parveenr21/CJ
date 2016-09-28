@@ -1,6 +1,6 @@
-package Constructor;
+package a5_Constructor;
 
-public class Const2 extends BaapConstructor {
+public class b2_Const2 extends b1_BaapConstructor{
 
 	int i;
 	
@@ -11,6 +11,14 @@ public class Const2 extends BaapConstructor {
 	
 		//common tasks by all constructor shoold be written within the init block as this will be executed once
 		//before every construcor calling
+		
+		/*
+		 * 
+		 * INIT block will be called multiple times if we gonna call multiple object creation or different kinds of construcor
+		 * 
+		 * INIT block is called just before any constructor call afte writing new operator .IMPORTANTTTT !!!!
+		 * 
+		 */
 		
 		i=10;
 		s1="TEMP";
@@ -23,9 +31,11 @@ public class Const2 extends BaapConstructor {
 	/*
 	 * 
 	 * Default constructor is implicit if no constructor ..ele we need to provide default also when parameterize is there
+	 * there must be atleast one constructor.. either compiler wilprovide or you provide.
+	 * 
 	 */
 	
-	Const2(){
+	b2_Const2(){
 		
 		i=1000;
 
@@ -40,8 +50,8 @@ public class Const2 extends BaapConstructor {
 	 * paramterized constructor if wewant to initiazlize non static datamember dynamically
 	 */
 	
-Const2(int a){
-		super(a);
+b2_Const2(int a){
+		super(a);			//Calling super class constructor... to h
 	
 	
 		i=a;
@@ -52,7 +62,7 @@ Const2(int a){
 
 //we can have a method with the same name as class name.. but it should have a return type else it would be considered as constructor
 
-Const2 (int a, String s)
+b2_Const2 (int a, String s)
 {
 	i=a;
 	s1=s;
@@ -78,13 +88,27 @@ public static void main(String ...xxx)
 	 * super with arguments.
 	 * 
 	 * RULE:-- child class should be able to run any of the constructor of Parent class 
+	 * IMPPP:--so if the PARENT class construtor is private then we wontbe able to extend.. 
+	 * as child constructor would not be able to call it.
+	 * 
+	 * HERE
+	 * 
+	 * as type 
+	 * 
+	 * new class() 		//here firstly the call will go to constructor and then it will call default super or if we have metioned super(parameterized)
+	 * AFTER parent class constructor.. it will call INIT block and resume constructor call execution.
+	 * 
+	 * 
 	 * 
 	 */
 	
 	
-new Const2();
-new Const2(10);
-new Const2(10,"JAVA");	
+	
+	
+	
+new b2_Const2();
+new b2_Const2(10);
+new b2_Const2(10,"JAVA");	
 	
  }
 }

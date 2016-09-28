@@ -1,4 +1,4 @@
-package Variables;
+package a1_Variables;
 class Childconst extends Parentconst{
 	
 	int b;
@@ -13,7 +13,7 @@ class Childconst extends Parentconst{
 		
 		Childconst c= new Childconst();
 		System.out.println(c.b);
-		System.out.println(a);
+		System.out.println(c.a);
 		
 	}
 	

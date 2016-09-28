@@ -1,4 +1,4 @@
-package Variables;
+package a1_Variables;
 
 class Nestedswitch{
 	int i;
@@ -6,7 +6,9 @@ class Nestedswitch{
 	
 	public static void main(String ...xxx)
 	{
-	
+	//default clause is not mandatory here...its a nested switch..
+		
+		//within a case statement we can write switch.
 	
 		
 		int i=2,j=1;
@@ -24,13 +26,14 @@ class Nestedswitch{
 			break;
 		case 2:
 			System.out.println("XXXXXX");
-		
+		break;
 			}
 		case 3:
 		
 		
 		System.out.println("YYYYYYYYYYYYYY");
-			}
+		break;
+		}
 			
 		
 	

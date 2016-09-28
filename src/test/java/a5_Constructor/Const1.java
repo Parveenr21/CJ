@@ -1,4 +1,4 @@
-package Constructor;
+package a5_Constructor;
 
 public class Const1 {
 
@@ -8,6 +8,31 @@ public class Const1 {
 	
 	//This means non staic members also get memory before calling constructor but obviuosly in the heap.
 	
+	
+	/*
+	 * 
+	 * More than one STATIC block
+	 * static 
+	 * 	{
+	 * 
+	 * 	}
+	 * 
+	 * 	{
+	 * 
+	 * 	}
+	 * 
+	 * 
+	 * and more than one INIT block can happen
+	 * 
+	 * 	{
+	 * 
+	 * 	}
+	 * 
+	 *	 {
+	 * 
+	 * 	}
+	 * 
+	 */
 	
 	static{
 		System.out.println("'first static block called");

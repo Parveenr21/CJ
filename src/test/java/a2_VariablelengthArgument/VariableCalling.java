@@ -1,4 +1,4 @@
-package VariablelengthArgument;
+package a2_VariablelengthArgument;
 
 
 class VariableCalling{
@@ -8,7 +8,11 @@ class VariableCalling{
 	public static void main(String ...xxx){
 		
 		VariableLength.fun_variablelength();
-		VariableLength.fun_variablelength("String1");
+		
+		//First priority is given to exact match .. arguments no match
+		//Else variable length argument constructor is checked.
+		
+		VariableLength.fun_variablelength("String1");	
 		
 		
 		VariableLength.fun_variablelength("String1", "String2");

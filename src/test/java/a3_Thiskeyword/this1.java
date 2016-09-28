@@ -1,4 +1,4 @@
-package Thiskeyword;
+package a3_Thiskeyword;
 
 class this1{
 	
@@ -66,6 +66,20 @@ this1(int a){
 		 
 		 /***********so when ever u type a parameterized constructor then pass the default constructor as well with that ****/
 		 
+		 //Init block just get called before very first call to construtor ..IMPORTANT
+		 
+		 
+		 /*
+		  * 
+		  * 
+		  * so flow would be
+		  * 
+		  * STATIC block
+		  * main method
+		  * INIT method just before object creation.
+		  * CONSTRUCTOR
+		  * 
+		  */
 		 
 	new this1(99);
 	

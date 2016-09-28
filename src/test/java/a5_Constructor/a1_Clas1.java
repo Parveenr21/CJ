@@ -1,13 +1,13 @@
-package Constructor;
+package a5_Constructor;
 
-public class Clas1 {
+public class a1_Clas1 {
 
 	
 	public static void main(String ...ccc)
 	
 	{
 		
-		Clas2.c3.execute();
+		a2_Clas2.c3.execute();
 		
 		
 	}

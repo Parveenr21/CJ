@@ -56,7 +56,7 @@ public class StringCharReveralinWord {
 		{
 			
 
-			
+			System.out.println(sb.charAt(i));
 			
 		}
 		

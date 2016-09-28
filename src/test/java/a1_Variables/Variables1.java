@@ -1,4 +1,4 @@
-package Variables;
+package a1_Variables;
 
 class Variables1{
 	
@@ -33,7 +33,7 @@ class Variables1{
 		//long with any variable lower than this.. like byte short int and long will result in int
 		
 		
-		// float and long will result in float
+		// float and long will result in float (16 byte getting cast to 8 byte)
 		
 		
 		

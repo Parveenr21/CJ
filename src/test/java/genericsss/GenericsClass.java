@@ -25,8 +25,8 @@ public class GenericsClass<T> {
 	
 		GenericsClass<String> gc1 = new GenericsClass<String>();
 		
-		GenericsClass<Integer> gc2 = new GenericsClass<>();  //1.7 onwards
-		GenericsClass<Integer> gc3 = new GenericsClass<>(); 
+		GenericsClass<Integer> gc2 = new GenericsClass<Integer>();  //1.7 onwards
+		GenericsClass<Integer> gc3 = new GenericsClass<Integer>(); 
 		
 		gc1.setGeneric("volvo");
 		gc2.setGeneric(new Integer(10));

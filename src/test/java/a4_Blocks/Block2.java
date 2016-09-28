@@ -1,4 +1,4 @@
-package Blocks;
+package a4_Blocks;
 
 class Block2{
 	

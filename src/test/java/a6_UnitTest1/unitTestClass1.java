@@ -1,4 +1,4 @@
-package UnitTest1;
+package a6_UnitTest1;
 
 import org.junit.Assert;
 import org.testng.annotations.Test;

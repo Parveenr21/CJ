@@ -1,4 +1,4 @@
-package UnitTest1;
+package a6_UnitTest1;
 
 
 import org.apache.commons.logging.Log;

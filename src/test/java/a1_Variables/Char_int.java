@@ -1,4 +1,4 @@
-package Variables;
+package a1_Variables;
 
 class Char_int{
 	

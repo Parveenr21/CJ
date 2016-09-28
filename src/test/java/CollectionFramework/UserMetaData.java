@@ -190,7 +190,6 @@ public class UserMetaData implements Comparable<UserMetaData>{
 
 
 
-	@Override
 	public int compareTo(UserMetaData other) {
 
 		//ascending sort

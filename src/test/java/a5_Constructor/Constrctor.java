@@ -1,4 +1,4 @@
-package Constructor;
+package a5_Constructor;
 
 public class Constrctor{
 	

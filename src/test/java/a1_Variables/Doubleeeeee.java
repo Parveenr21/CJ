@@ -1,4 +1,4 @@
-package Variables;
+package a1_Variables;
 
 class Doubleeeeee {
 	
@@ -14,6 +14,11 @@ class Doubleeeeee {
 	
 	if ((int)a==366 & r>10)  //& and && both works for the boolean operations
 		//when we use normal & and | then both the expressions are evaluated
+		//& and | are bitwise operators and works on bit
+		
+		// for boolean.. it works on true and false values..but even if first expression is true . second one will be evelauated.
+		
+		
 		//when we use short circuit operators i,.e && and || then only the very first one is evalauted and as per the need the
 		//second part gets evaluated
 	{

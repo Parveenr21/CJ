@@ -1,4 +1,4 @@
-package VariablelengthArgument;
+package a2_VariablelengthArgument;
 
 
 class VariableLength{

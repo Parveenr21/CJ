@@ -1,4 +1,4 @@
-package Variables;
+package a1_Variables;
 
 class Casting{
 	
@@ -23,7 +23,13 @@ class Casting{
 	
 	char c1;
 	
-	
+	/*
+	 * integer literals are int by default
+	 * 
+	 * decimal literals are double by default
+	 * 
+	 * 
+	 */
 	
 	float f1;
 	float f2;

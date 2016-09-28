@@ -26,7 +26,6 @@ public class UsingComparator {
 }
 
 class SizeComparator implements Comparator<HDTV> {
-	@Override
 	public int compare(HDTV tv1, HDTV tv2) {
 		int tv1Size = tv1.getSize();
 		int tv2Size = tv2.getSize();

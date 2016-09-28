@@ -1,13 +1,14 @@
-package Constructor;
+package a5_Constructor;
 
-public class BaapConstructor {
+public class b1_BaapConstructor {
 
 	
-	public BaapConstructor() {
-		
+	public b1_BaapConstructor() {
+		System.out.println("BAAP defgault construcor");
+
 	}
 
-	public BaapConstructor(int a) {
+	public b1_BaapConstructor(int a) {
 		
 System.out.println("the value passed from child object to parent class constructor" + a);
 	}

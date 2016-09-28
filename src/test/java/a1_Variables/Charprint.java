@@ -1,4 +1,4 @@
-package Variables;
+package a1_Variables;
 class Charprint {
 	public static void main(String args[]) {
 	char ch1;

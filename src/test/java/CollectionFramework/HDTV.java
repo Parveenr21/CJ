@@ -25,7 +25,6 @@ public class HDTV implements Comparable<HDTV> {
 		this.brand = brand;
 	}
  
-	@Override
 	public int compareTo(HDTV tv) {
  
 		if (this.getSize() > tv.getSize())

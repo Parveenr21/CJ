@@ -1,4 +1,4 @@
-package Thiskeyword;
+package a3_Thiskeyword;
 
 class this3{
 	
@@ -16,8 +16,8 @@ class this3{
 		
 		
 			 System.out.println("Static function with value of local variable " + sta1 );
-			 System.out.println("Static function with value of static clas variable " + this3.sta1 );
-			 
+			 System.out.println("Static function with value of static clas variable " + this3.sta1 ); //class level variable
+			// System.out.println("Static function with value of static clas variable " + this.nonsta1 ); //this can not be in static method
 			 
 		 	 }
 	 
