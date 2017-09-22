@@ -53,10 +53,14 @@ class BinSearch2{
 
 		int []z=new int[]{2,5,6,7,8,11,12,14,18,19};
 
+		
+		
+		z=new int[]{1,3,11,12,23,25,36,37,43,52,61};
+		
 		//int []z=new int[]{1,2,3};
 
 
-		int x=18;
+		int x=3;
 		BinSearch2.fun_search1(z,x);
 		// in called function we always pass values 
 

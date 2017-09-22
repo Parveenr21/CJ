@@ -43,5 +43,7 @@ class Sort_single{
 	
 		Sort_single.sort(new int[]{9,8,9,6,5,4,3,2,1});
 		
+		
+		
 	}
 }

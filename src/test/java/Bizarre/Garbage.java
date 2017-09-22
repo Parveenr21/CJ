@@ -64,6 +64,9 @@ class Garbage {
 
 		System.gc();
 
+		
+		//System.gc();..It internally calls   Runtime.getRuntime().gc();..Its static method.
+	//	Runtime.getRuntime().gc();..Its an instance method..
 	}
 
 }

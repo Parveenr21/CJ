@@ -10,8 +10,8 @@ class Char_int{
 		
 		 int ascii=a;
 
-		 System.out.println(a);
-System.out.println(ascii);
+		 System.out.println(a);	//It will print value of a which is char
+System.out.println(ascii);  //It will print value of ascii which is integer/
 		
 	}
 	public static void main(String ...ass)
