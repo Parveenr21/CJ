@@ -1,0 +1,134 @@
+Arrays vs LinkedList
+
+2.Size of Array is fixed and we know upper limit on the number of elements in advance.
+
+3. The allocated memory is equal to the upper limit irrespective of the usage
+
+3. Inserting a new element in an array of elements is expensive, (For sorted Array)
+because room has to be created for the new elements and to create room existing elements have to shifted. 
+
+4. Deletion is also expensive with arrays until unless some special techniques are used
+
+Linked list provides following two advantages over arrays
+1) Dynamic size
+2) Ease of insertion/deletion
+3) Array needs continous location.  continuous memory is allocated which can be a bottle neck while creating an array of larger size
+
+
+
+Linked lists have following drawbacks:
+
+1) Random access is not allowed. We have to access elements sequentially starting from the first node. 
+So we cannot do binary search with linked lists
+
+2) Extra memory space for a pointer is required with each element of the list.
+
+
+ 3) Arrays have better cache locality that can make a pretty big difference in performance. 
+ Basically the memory location close to the one being used by cpu gets frequently used so Array store elements in contiguous manner making it easy and faster to load the elements rather than referring back to Main memory then loading the block of the location of LL's next element and then using the data.This again and again referring to MM and back to even HDD takes a lot of time hence
+Arrays have better cache locality that can make a pretty big difference in performance
+ 
+ 
+ ########################################################################################################
+ 
+ Arrays should be used if READ operations are primarily to be used and can be at RANDOM.
+ LinkedList to be used when insertion,deletion or WRITE operations are much in numbers.
+ 
+ 
+ ########################################################################################################
+
+An array of 4 elements (integer type) which have been initialized with 1, 2, 3 and 4. Suppose, these elements are allocated at memory addresses 0x100, 0x104, 0x08 and 0x10B respectively.
+
+[(1)]       [(2)]      [(3)]      [(4)]
+0x100       0x104      0x108      0x10B
+
+A linked list with 4 nodes where each node has integer as data and these data are initialized with 1, 2, 3 and 4. Suppose, these nodes are allocated via malloc() and memory allocated for them is 0x200, 0x308, 0x404 and 0x20B respectively.
+
+[(1), 0x308]     [(2),0x404]      [(3),0x20B]       [(4),NULL]  
+  0x200            0x308            0x404              0x20B  
+
+Anyone with even little understanding of array and linked-list might not be interested in the above explanation.
+
+
+
+Since elements of array are contiguous in memory, 
+we can access any element randomly using index e.g. intArr[3] will access directly fourth element of the array.
+Also, due to contiguous memory for successive elements in array, no extra information is needed to be stored in individual elements i.e. no overhead of metadata in arrays
+
+
+
+
+What if we need to allocate array memory from Heap section (i.e. at run time) and linked list memory from Data/Stack section. 
+First of all, is it possible? Before that, one might ask why would someone need to do this? 
+Now, I hope that the remaining article would make you rethink about the idea of array vs. linked-list :)
+
+
+
+Now consider the case when we need to store certain data in array (because array has the property of random access due to contiguous memory) 
+but we don’t know the total size apriori. One possibility is to allocate memory of this array from Heap at run time. For example, as follows:
+
+/*At run-time, suppose we know the required size for integer array (e.g. input size from user). 
+Say, the array size is stored in variable arrSize. Allocate this array from Heap as follows*/
+
+int size;		//get size from user	//Java way.. array are also getting memory from heap.
+int array[] = new int[size];		//we do it because run time memory is allocated and we dont have to think of freeing it up.
+
+Basically, based on the programming problem, we have combined one benefit of array (i.e. random access of elements) 
+and one benefit of linked list (i.e. delaying the memory allocation till run time and allocating memory from Heap).
+
+
+
+Now consider the case when we need to store data in a linked list 
+(because no. of nodes in linked list would be equal to actual data items stored i.e. no extra space like array) 
+but we aren’t allowed to get this memory from Heap again and again for each node.
+
+ This might look hypothetical situation to some folks but it’s not very uncommon requirement in embedded systems.
+  Basically, in several embedded programs, allocating memory via malloc() etc. isn’t allowed due to multiple reasons. 
+  
+  One obvious reason is performance i.e. allocating memory via malloc() is costly in terms of time complexity 
+  because your embedded program is required to be deterministic most of the times. 
+  
+  Another reason could be module specific memory management i.e. it’s possible that each module in embedded system manages its own memory.
+
+In short, if we need to perform our own memory management, instead of relying on system provided APIs of malloc() and free(),
+ we might choose the linked list which is simulated using array. 
+I hope that you got some idea why we might need to simulate linked list using array. 
+
+
+
+	it would be
+	
+	Node list[] = new Node[5];	//creating array of 5 nodes.	
+	
+	
+	f we initialize this linked list (which is actually an array), it would look as follows in memory:
+
+[(0),-1]    [(0),-1]    [(0),-1]   [(0),-1]   [(0),-1]
+0x500        0x508       0x510      0x518      0x520
+
+The important thing to notice is that all the nodes of the linked list are contiguous in memory (each one occupying 8 bytes)
+ and nextIndex of each node is set to -1. This (i.e. -1) is done to denote that the each node of the linked list is empty as of now.
+  This linked list is denoted by head index 0.
+  
+  
+  Now, if this linked list is updated with four elements of data part 4, 3, 2 and 1 successively, 
+  it would look as follows in memory. This linked list can be viewed as 0x500 -> 0x508 -> 0x510 -> 0x518.
+
+[(1),1]       [(2),2]      [(3),3]     [(4),-2]     [(0),-1]
+ 0x500         0x508        0x510       0x518        0x520
+
+The important thing to notice is nextIndex of last node (i.e. fourth node) is set to -2. This (i.e. -2) is done to denote the end of linked list.
+ Also, head node of the linked list is index 0. This concept of simulating linked list using array would look more interesting 
+ if we delete say second node from the above linked list. In that case, the linked list will look as follows in memory:
+
+[(1),2]       [(0),-1]      [(3),3]     [(4),-2]     [(0),-1]
+ 0x500         0x508         0x510       0x518        0x520
+
+The resultant linked list is 0x500 -> 0x510 -> 0x518. 
+Here, it should be noted that even though we have deleted second node from our linked list, 
+the memory for this node is still there because underlying array is still there. 
+But the nextIndex of first node now points to third node (for which index is 2).
+
+
+ 
+ 
