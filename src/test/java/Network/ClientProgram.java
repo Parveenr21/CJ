@@ -1,7 +1,7 @@
 package Network;
 
-import java.net.*;
 import java.io.*;
+import java.net.Socket;
 
 public class ClientProgram
 {

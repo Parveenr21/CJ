@@ -1,7 +1,5 @@
 package Quiz;
 
-import java.io.IOException;
-
 class Doublereturn{
 	
 	

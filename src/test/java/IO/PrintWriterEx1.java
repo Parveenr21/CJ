@@ -1,6 +1,6 @@
 package IO;
 
-import java.io.*;
+import java.io.PrintWriter;
 public class PrintWriterEx1 {
 
 	//Console Output using CharStrem.. PrintWriter class

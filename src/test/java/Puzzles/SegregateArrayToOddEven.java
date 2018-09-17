@@ -1,7 +1,5 @@
 package Puzzles;
 
-import java.io.*;
- 
 public class SegregateArrayToOddEven
 {
     static void segregateEvenOdd(int arr[])

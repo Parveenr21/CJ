@@ -1,7 +1,5 @@
 package Puzzles;
 
-import com.gargoylesoftware.htmlunit.javascript.host.Cache;
-
 public class Anagram {
 
 	//String "abcd" is given "bcad" is an anagram

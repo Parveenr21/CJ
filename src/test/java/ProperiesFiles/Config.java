@@ -1,8 +1,10 @@
 package ProperiesFiles;
 
 
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
 
 public class Config {
 	  String str, key;

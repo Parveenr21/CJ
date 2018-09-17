@@ -3,9 +3,17 @@ class Charprint {
 	public static void main(String args[]) {
 	char ch1;
 	ch1 = 88; // code for X
+
 	//chars in java ascii value from 0 to 65536
 	//No non-negative number to represent ASCII for chars
-	int i=88;
+
+		int ich1=ch1;
+		System.out.println(ch1);		//printing char value of 88  which is X
+		System.out.println(ich1); //printing int value of 88 whic is  88
+
+
+
+		int i=88;
 
 	byte x=(byte)1000;
 	System.out.println(x);

@@ -1,9 +1,8 @@
 package Log4j;
 
+import Json.JsonReader;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-
-import Json.JsonReader;
 
 /*  This class is the java object or simply the data just like a properties file data ...of which we will create json object..
  * This class is still needed as this class has to be passed in while reading the JSON file..and the output too would be this class 

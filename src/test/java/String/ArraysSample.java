@@ -1,9 +1,6 @@
 package String;
 
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
 class ArraysSample{
 	
 	static int x= 5;
