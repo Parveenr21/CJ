@@ -1,10 +1,11 @@
 package CollectionFramework;
 
+import org.apache.poi.util.SystemOutLogger;
+
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-
-import org.apache.commons.collections.map.HashedMap;
 
 
 public class HashMap_app {
@@ -13,7 +14,7 @@ public class HashMap_app {
 	{
 		/*
 		 * HashMap from Java.Util package..to set Key- Value pair here
-		 * 
+		 *
 		 */
 
 		HashMap<Integer, String> hashmapppp  = new HashMap<Integer, String>(); //Again working on Objects.. its Integer and not int
@@ -23,10 +24,14 @@ public class HashMap_app {
 		hashmapppp.put(new Integer(0), "TestString");
 		hashmapppp.put(0, "TestString1");
 
-		//for non existing KEYS.. we get NULL values
+
+		//for non existing KEYS.. we get NULL values as result of  map.get
+		System.out.println(hashmapppp.get(100));
 
 
-		//System.out.println(hashmapppp.get(0)); //overwriting the key value..as O/P would be TestString1
+
+
+		System.out.println(hashmapppp.get(0)); //overwriting the key value..as O/P would be TestString1
 
 
 
@@ -38,6 +43,57 @@ public class HashMap_app {
 
 		//Iterate over HASH MAP..
 
+		//2 of the best ways
+
+		/*
+
+
+		Using iterator and Map.Entry
+
+		long i = 0;
+		Iterator<Map.Entry<Integer, Integer>> it = map.entrySet().iterator();
+		while (it.hasNext()) {
+			Map.Entry<Integer, Integer> pair = it.next();
+			i += pair.getKey() + pair.getValue();
+		}
+
+
+
+
+		Using foreach and Map.Entry
+
+		long i = 0;
+		for (Map.Entry<Integer, Integer> pair : map.entrySet()) {
+			i += pair.getKey() + pair.getValue();
+		}
+
+
+
+using JAVA 8 lambda way
+
+Map<String, Integer> items = new HashMap<>();
+	items.put("A", 10);
+	items.put("B", 20);
+	items.put("C", 30);
+	items.put("D", 40);
+	items.put("E", 50);
+	items.put("F", 60);
+
+	items.forEach((k,v)->System.out.println("Item : " + k + " Count : " + v));
+
+	items.forEach((k,v)->{
+		System.out.println("Item : " + k + " Count : " + v);
+		if("E".equals(k)){
+			System.out.println("Hello E");
+		}
+	});
+
+
+		 */
+
+
+		System.out.println("default wayyyyyyyy");
+
 		for(Map.Entry<Integer, String> it : hashmapppp.entrySet())
 		{
 
@@ -45,18 +101,21 @@ public class HashMap_app {
 
 			System.out.println("getting value " + it.getValue());
 
-			
-		}	
 
-		
-		
-		
-		
-		
+		}
+
+		System.out.println("Lambda way");
+
+
+		hashmapppp.forEach((k,v)->System.out.println("key : " + k + " value : " + v));
+
+
+
+
 		/*
-		 * 
+		 *
 		 * WARNING:-- hashMAP does not maintain.. order REMEMBER.. IT could be .. the ordering of KEY-VALUE pair can be changed at any time.
-		 * 
+		 *
 		 * HASH MAPS are not sorted.
 		 */
 
@@ -64,30 +123,33 @@ public class HashMap_app {
 
 		/*
 		 * put (key value)
-		 * 
+		 *
 		 * get (key)  value is returned (here both Key and Values are object)
-		 * 
+		 *
 		 * remove(key)
-		 * 
-		 * 
+		 *
+		 *
 		 */
 
 
 
 
 
-		System.out.println("HASH MAP fetching of key-value is also an  Iterator  based.. But the below code does not work");
 
-		/*while(hashmapppp.entrySet().iterator().hasNext())
-				{
 
-					Map.Entry<Integer, String> itt =hashmapppp.entrySet().iterator().next();
+		System.out.println("Iterator wayyyyyyyy");
 
 
 
-					System.out.println(itt.getValue());
+		Iterator<Map.Entry<Integer, String>> it = hashmapppp.entrySet().iterator();
+		while (it.hasNext())
+		{
+			Map.Entry<Integer, String> pair = it.next();
+			System.out.println(pair.getKey());
+			System.out.println(pair.getValue());
 
-				}*/
+
+		}
 
 	}
 

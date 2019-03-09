@@ -18,7 +18,7 @@ class this1{
 	
 	
 	{
-		
+
 		sta1=5;
 		nonsta1=50;
 		sta();
@@ -67,7 +67,7 @@ this1(int a){
 		 /***********so when ever u type a parameterized constructor then pass the default constructor as well with that ****/
 		 
 		 //Init block just get called before very first call to construtor ..IMPORTANT
-		 
+		 //static block and static variables are set before class instance variables.. as class is loaded first.. and instance variables are set..once an object gets created or in progress
 		 
 		 /*
 		  * 

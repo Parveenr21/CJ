@@ -1,9 +1,6 @@
 package Arrays;
 
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
 class ArraysSample{
 	
 	static int x= 5;
@@ -27,9 +24,9 @@ class ArraysSample{
 		{
 			if(a[i]>a[i+1])
 			{
-				a[i]=a[i]+a[i+1];
-				a[i+1]=a[i]-a[i+1];
-				a[i]=a[i]-a[i+1];
+				a[i]=a[i]+a[i+1];		//a = a+b
+				a[i+1]=a[i]-a[i+1];  	//b = a-b
+				a[i]=a[i]-a[i+1];      //a = a-b
 			}
 			}
 		}

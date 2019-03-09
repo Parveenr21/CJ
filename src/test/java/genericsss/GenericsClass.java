@@ -1,7 +1,5 @@
 package genericsss;
 
-import org.apache.xerces.dom.PSVIDOMImplementationImpl;
-
 public class GenericsClass<T> {
 	
 	T t;		

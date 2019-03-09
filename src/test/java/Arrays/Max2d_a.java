@@ -42,7 +42,7 @@ class Max2d_a{
 
 	public static void main(String ...as)
 	{
-		Max2d_a.fun(new int[][]{{11,2,3},{4,5,6},{7,8,9},{1,2,1}});
+		Max2d_a.fun(new int[][]{{11,2,3},{14,5,6},{7,8,9},{1,2,1}});
 
 	}
 

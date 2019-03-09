@@ -1,8 +1,6 @@
 package ExceptionHandling;
 
 
-import java.io.IOException;
-
 class ExceptionH{
 	
 	

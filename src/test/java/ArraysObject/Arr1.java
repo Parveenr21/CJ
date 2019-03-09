@@ -1,9 +1,6 @@
 package ArraysObject;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
-
-import org.apache.xerces.dom.DeepNodeListImpl;
 
 public class Arr1 {
 
@@ -34,7 +31,8 @@ public class Arr1 {
 	     System.out.println("CASE 1");
 	     }
 	    
-	     
+	     //arrays do not support any methods besides those provided by Object.
+		// Consequently, using Object.equals() on any array compares only array references, not their contents.
 	     
 	      if(x==y){				
 	      
@@ -51,17 +49,17 @@ public class Arr1 {
 	     }
 	      
 	      
-	     /* if(Arrays.deepEquals(x, y))				//Deep equls only work for object array means.. array of reference and not on the primitive reference
+	      /*if(Arrays.deepEquals(x, y))				//Deep equls only work for object array means.. array of reference and not on the primitive reference
 	      {
 	     	 
 	     	 System.out.println("CASE 4"); 
-	      }*/
+	      }
 	      
 	     
 	     else{
 	    	 
 	    	 System.out.println("NO CONDITION MATCHED");
-	     }
+	     }*/
 	    
 	   
 	   

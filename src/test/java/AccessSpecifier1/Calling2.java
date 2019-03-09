@@ -1,8 +1,6 @@
 package AccessSpecifier1;
 
 
-import AccessSpecifier2.*;
-
 public class Calling2 {
 
 	

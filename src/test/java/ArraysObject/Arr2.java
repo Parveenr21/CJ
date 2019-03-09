@@ -13,8 +13,8 @@ public class Arr2 {
 	void foo(){
 		
 		int k;
-		int x[]= new int[10];  		//here array object is created so as object variables get default value automatically 
-		Arr1 xx[]= new Arr1[10];		//so int array default values 0 while reference array object value null by default.
+		 x= new int[10];  		//here array object is created so as object variables get default value automatically
+		xx= new Arr1[10];		//so int array default values 0 while reference array object value null by default.
 	    Arr1 c;
 	
 	

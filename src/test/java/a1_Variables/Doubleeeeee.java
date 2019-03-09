@@ -2,7 +2,17 @@ package a1_Variables;
 
 class Doubleeeeee {
 	
-	
+
+	//&  and  |  are bit wise operators .. works on bits and both ("here we do this on variables value") are evaluated ..here
+	//hre we do it like (a|b)
+	//int number1 = 12, number2 = 25, result;
+	// result = number1 | number2;
+
+
+	// && and || are logical operators and here first expression is evaluated and if needed then only second epxression is evaluated
+//This is also call short circuit operators.. (here we do it on expression such that  TRUE|| TRUE or FALSE&& FALSE)
+//java bitwise operators can be applied to byte, short, int, long and char and not on char and float and double datatypes
+
 	public static void main(String args[]) {
 	float pi, r, a;
 	r = (float) 10.8; // radius of circle

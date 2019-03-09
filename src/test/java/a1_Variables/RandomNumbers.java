@@ -1,6 +1,6 @@
 package a1_Variables;
+
 import java.util.Calendar;
-import java.text.SimpleDateFormat;
 
 public class RandomNumbers
 {

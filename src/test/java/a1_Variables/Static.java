@@ -7,7 +7,7 @@ class Static{
 	
 	public static void stat(){
 		
-			System.out.println("STATIC funtion");
+			System.out.println("STATIC function");
 	
 	
 	}

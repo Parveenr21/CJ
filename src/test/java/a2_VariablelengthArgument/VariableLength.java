@@ -5,7 +5,7 @@ class VariableLength{
 	
 	
 	//Overloaded method fun_variablelength
-	
+	// incase of multiple argument to a method.. last argument only can be a variable length arguement.
 	
 	public static void fun_variablelength(String ...ccccc){
 		

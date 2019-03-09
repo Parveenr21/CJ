@@ -1,10 +1,13 @@
 ACCESS SPECIFIERS at class level (only PUBLIC, default, final and abstract)
 
 
-nothing like protected and private..
+nothing like protected and private.. which can be applied to method
 
 1. public Class with public Construcor  (objects can be created at both with in package and outside package).
-2. public Class with protected Construcor (Objects can not be created at diff package.. only overridding can happen)
+2. public Class with protected Construcor (Objects can not be created at diff package.. only child class can access this  can happen)
+
+
+
 
 3. Public class with default constructor (here outside package.. no object of this class and even can not create child of this.. as child construcor will not be 
 able to call this class constructor..) so only..within package ..this class can be accessed.

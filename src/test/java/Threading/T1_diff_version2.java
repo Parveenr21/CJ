@@ -1,7 +1,5 @@
 package Threading;
 
-import org.apache.maven.model.Parent;
-
 class running extends Thread{
 	
 	public running(String threadName) {

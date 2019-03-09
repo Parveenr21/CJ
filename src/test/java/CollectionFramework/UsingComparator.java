@@ -2,7 +2,6 @@ package CollectionFramework;
 
 import java.util.Arrays;
 import java.util.Comparator;
-import CollectionFramework.HDTV;
  
 public class UsingComparator {
 	public static void main(String[] args) {

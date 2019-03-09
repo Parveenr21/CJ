@@ -42,7 +42,7 @@ class Min2d_b{
 	
 	public static void main(String ...as)
 	{
-		Min2d_b.fun(new int[][]{{11,2,3},{4,5,6},{7,8,9}});
+		Min2d_b.fun(new int[][]{{11,2,3},{-4,5,6},{7,8,9}});
 		
 	}
 

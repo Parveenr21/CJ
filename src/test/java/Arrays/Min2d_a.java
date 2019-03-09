@@ -10,7 +10,7 @@ class Min2d_a{
 		min=a[i][j];
 		for (i=0;i<a.length;i++)
 		{
-			j=i;
+			j=i;		//this is wrong
 			
 			for (;j<a[i].length;j++)
 			
@@ -29,18 +29,18 @@ class Min2d_a{
 					
 			
 		}
-	
-		
-		
-			
-		
+
+
+
+
+		System.out.println("######");
 		System.out.println(min);
 		
 	}
 	
 	public static void main(String ...as)
 	{
-		Min2d_a.fun(new int[][]{{1,2,3},{4,5,6},{7,8,9}});
+		Min2d_a.fun(new int[][]{{1,2,3},{-2,5,6},{7,8,9}});
 		
 	}
 

@@ -2,7 +2,9 @@ package a5_Constructor;
 
 public class CopyConst {
 
-	
+	//  initilize members with a construcot first
+	//create another constructor with argument as same class object..
+	// this object can be used to iniitizalise members now.
 	int i;
 	String s;
 	

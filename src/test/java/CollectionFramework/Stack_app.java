@@ -2,8 +2,6 @@ package CollectionFramework;
 
 import java.util.Stack;
 
-import org.apache.commons.collections.ArrayStack;
-
 public class Stack_app {
 
 	public static void main(String ...ssss)

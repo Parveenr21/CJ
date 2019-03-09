@@ -1,6 +1,4 @@
 package AccessSpecifier1;
-import AccessSpecifier2.*;
-
 //public class Calling extends PublicClass1{
 
 public class Calling{

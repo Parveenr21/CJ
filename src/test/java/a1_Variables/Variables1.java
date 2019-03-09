@@ -30,7 +30,7 @@ class Variables1{
 				
 		// int with any variable lower than this ..like byte short and int will result in int
 		
-		//long with any variable lower than this.. like byte short int and long will result in int
+		//long with any variable lower than this.. like byte short int and long will result in long
 		
 		
 		// float and long will result in float (16 byte getting cast to 8 byte)

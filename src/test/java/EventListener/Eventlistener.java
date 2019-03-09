@@ -2,8 +2,9 @@ package EventListener;
 
 
 import java.applet.Applet;
-import java.awt.event.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 @SuppressWarnings("serial")
 public class Eventlistener extends Applet implements ActionListener {

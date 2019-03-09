@@ -46,7 +46,9 @@ package Bizarre;
 
 
 //import static Bizarre.Methods.getMethodSTATIC;  //individual static method imported
-import static Bizarre.Methods.*;		//here  "Methods" is a class and I have imported * with in methods .. which means all static methods of class Methods
+
+import static Bizarre.Methods.getMethodSTATIC;
+import static Bizarre.Methods.setMethodSTATIC;
 
 
 class StaticImport {

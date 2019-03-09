@@ -1,8 +1,6 @@
 package a6_UnitTest1;
 
 
-import org.apache.commons.logging.Log;
-
 public class DevClass1 {
 
 	int x=15;

@@ -11,6 +11,7 @@ class Calling_BaapBetaDada {
 		Dada d_beta1 = new Beta1();
 		Dada d_beta2 = new Beta2();
 		Dada d_beta3 = new Beta3();
+	d_beta3.dada_method();
 
 		Baap bp = new Baap();
 		Baap bp_beta1 = new Beta1();
