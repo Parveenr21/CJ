@@ -1,6 +1,7 @@
 package CollectionFramework;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class HashMapANDHashTable {
@@ -60,6 +61,22 @@ public class HashMapANDHashTable {
 			System.out.println("getting value " + it.getValue());
 
 		}	
+		
+	
+		
+		Iterator<Integer> it=hmap.keySet().iterator();
+		
+		
+		while(it.hasNext())
+		{
+			
+			Integer key=it.next();
+			System.out.println("key is   "+key);
+			System.out.println("Value is   "+hmap.get(key));
+			
+			
+			
+		}
 		
 		
 	}

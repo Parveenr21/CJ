@@ -1,11 +1,10 @@
 package CollectionFramework;
 
+import AbstractnInterfaces.Parent_v1;
+import org.apache.commons.collections.IterableMap;
 import org.apache.poi.util.SystemOutLogger;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 
 public class HashMap_app {
@@ -151,7 +150,28 @@ Map<String, Integer> items = new HashMap<>();
 
 		}
 
+
+//Iterator returned is of KEy type as it is the key
+		Iterator<Integer>itr=hashmapppp.keySet().iterator();
+
+		System.out.println("$$$$$$$$");
+
+		while(itr.hasNext())
+		{
+
+			Integer key=itr.next();
+
+			System.out.println(key);
+			System.out.println(hashmapppp.get(key));
+
+
+
+		}
+
+
 	}
+
+
 
 
 

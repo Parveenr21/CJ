@@ -1,6 +1,6 @@
 package CollectionFramework;
 
-import com.oracle.tools.packager.mac.MacAppBundler;
+
 
 import java.util.HashMap;
 import java.util.Map;
@@ -37,7 +37,31 @@ public class FrequencyCountingString {
 			}
 
 
+			/*
+
+			The below code also works fine
+
+
+			for (int i = 0; i < s.length(); i++) {
+
+			if (map1.get(s.charAt(i)) == null) {
+				map1.put(s.charAt(i), 1);
+			} else {
+				map1.put(s.charAt(i),(map1.get(s.charAt(i))+1) );
+
+			}
+
+
 		}
+
+
+
+			 */
+
+
+		}
+
+		System.out.println(map1);
 
 		return map1;
 

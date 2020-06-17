@@ -1,0 +1,22 @@
+Static inner class can access only static VARIABLES of Outer inner class by its methods
+NonStaic inner class can access both  static and non static VARIABLES of Outer class,
+though static variables also accessed by non static methods in inner class.
+
+
+
+static inner class can have its both static and non static members
+inner class can only have non static members.
+
+
+
+e generally use an anonymous class (class with no name) when we create an instance of a class with some
+overloading of a method, without having to subclass a class.
+
+//If wewant to use method of class with some overriding.. then instead of making a subclass, we create anonmyous class
+and override specific methods.
+//This let us stop making a subclass for just one overridden method.
+
+
+We can simply instantiate anonymous inner class without making a separate class.
+The classical example of anonymous class is initializing an anonymous class for Runnable interface:
+

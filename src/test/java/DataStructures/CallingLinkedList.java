@@ -56,9 +56,12 @@ public class CallingLinkedList {
 		
 		list1.push(list1.new Node(500));
 		list1.displayList();
-	
+	System.out.println("###########REVERSED LIST ###################");
+
+list1.reverseLinkList();
+list1.displayList();
+
 		System.out.println("##############################");
-		
 		list1.append(list1.new Node(4000));
 		list1.displayList();
 		

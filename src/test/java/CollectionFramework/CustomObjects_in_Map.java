@@ -40,12 +40,16 @@ public class CustomObjects_in_Map {
 	//	System.out.println(mapper);
 		
 		
-		
+
 		System.out.println(mapper.getValue());
 		
 	}
-	
-		
+
+
+
+	//{0={  Parveen   1800000} , 1={  Shashank   1500000} , 2={  Gyan   1000000} , 3={  Vikas   800000} }
+	//It prints contents of MAP
+	System.out.println(mp);
 		
 	}
 	

@@ -42,6 +42,8 @@ public class ArrayList_app {
 		Intlist.add(null);
 		Intlist.add(19);
 		Intlist.add(9);
+		
+		
 
 //another way
 

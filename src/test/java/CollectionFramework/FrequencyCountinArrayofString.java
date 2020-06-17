@@ -171,6 +171,7 @@ List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
 
 		}
 
+
 		System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 		System.out.println(Collections.frequency(li, "a"));
 		System.out.println(Collections.frequency(li, "b"));

@@ -28,6 +28,7 @@ public class Abst_Body_class1 extends AbstClass1 {
 	{
 
 		new Abst_Body_class1().fun1();
+		new Abst_Body_class1().fun3();
 
 	}
 	

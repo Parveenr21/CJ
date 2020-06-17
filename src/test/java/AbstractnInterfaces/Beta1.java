@@ -18,4 +18,10 @@ class Beta1 extends Baap {
 				.println("BETA 1 has overridden the baao method name baap_method");
 	}
 
+
+	void farzi(String x, String y){
+
+
+	}
+
 }

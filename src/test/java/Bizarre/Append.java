@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-//import com.paypal.test.sample.testng.Deleteacc;
 
 public class Append {
 	public static void main(String[] args) throws IOException {

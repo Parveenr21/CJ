@@ -4,9 +4,21 @@ public class LinkedList {
 
 	Node head;
 
+
+	/*
+
+	HERE IN LINKED LIST.. KEY IS TO KEEP TRACK OF TWO THINGS
+
+	1.  HEAD AND TRY SAVING IT IN "TEMP" VARIABLE AND USE IT AS REQUIRED
+
+	2. KEEP TRACK OF PREVIOUS AND CURRENT NODE AND AS REQUIRED USE THE PREVIOUS NODE
+
+	 */
+
+
 	class Node {
 
-		int data;		
+		int data;
 		Node next;			//This variable will hold the next NODE object
 
 		// Constructor 1
@@ -50,7 +62,7 @@ public class LinkedList {
 			head = newnode;
 		}
 
-		newnode.next = head;		
+		newnode.next = head;
 		head = newnode;		//setting new head.
 
 		// o(1) complexity here its a constant
@@ -60,7 +72,7 @@ public class LinkedList {
 
 	public void append(Node newnode) {
 		Node node = null;
-		
+
 		if (head == null) {			//for empty list
 
 			head = newnode;
@@ -140,6 +152,40 @@ public class LinkedList {
 
 	}
 
+
+	public void reverseLinkList()
+	{
+
+		//Here key is to keep track of current and previous node and  set the current.next to previous
+
+		Node current=head;
+		Node previous=null;
+		Node temp=null;			//this node will iterate through whole link list
+
+
+
+
+
+		while(current!=null)
+		{
+
+			temp=current.next;
+			current.next=previous;
+			previous=current;
+			current=temp;
+
+		}
+
+		head=previous;
+
+
+
+
+
+
+
+	}
+
 	// finding length of linked list using iteration
 
 	public int getCount() {
@@ -170,77 +216,77 @@ public class LinkedList {
 		return getCountRecursionApproach(head);
 	}
 
-	
-	
+
+
 	public void swapNodes(Node x, Node y)
 	{
 		Node node=head;
 		Node prevXnode=null, nextX= null;
 		Node prevYnode=null, nextY= null;
-		
-		
+
+
 		while(!(node.next.equals(x)))
 		{
 			prevXnode=node;
 			node=node.next;
 			nextX=node;
-			
+
 		}
-		
-		
-		
+
+
+
 		node=head;
-		
+
 		while(!node.next.equals(y))
 		{
 			prevYnode=node;
 			node=node.next;
 			nextY=node;
-			
+
 		}
-		
-		
-	if(x==head){	
+
+
+		if(x==head){
 			x.next=nextY;
 			prevYnode.next=x;
 			y.next=nextX;
-	}
-	
-	if(y==head){	
-		y.next=nextX;
-		prevXnode.next=y;
-		x.next=nextY;
-}
-	
-	if(x.next==null)
-	{
-		x.next=nextY;
-		prevYnode.next=x;
-		prevXnode.next=y;
-		
-	}
-		
-	
-	if(y.next==null)
-	{
-		y.next=nextX;
-		prevXnode.next=y;
-		prevYnode.next=x;
-		
-	}
-	
-	
-	else{
-		
-		x.next=nextY;
-		prevXnode.next=y;
-		prevYnode.next=x;
-		x=prevYnode;
-		y.next=nextX;
+		}
 
-		
+		if(y==head){
+			y.next=nextX;
+			prevXnode.next=y;
+			x.next=nextY;
+		}
+
+		if(x.next==null)
+		{
+			x.next=nextY;
+			prevYnode.next=x;
+			prevXnode.next=y;
+
+		}
+
+
+		if(y.next==null)
+		{
+			y.next=nextX;
+			prevXnode.next=y;
+			prevYnode.next=x;
+
+		}
+
+
+		else{
+
+			x.next=nextY;
+			prevXnode.next=y;
+			prevYnode.next=x;
+			x=prevYnode;
+			y.next=nextX;
+
+
+		}
+
 	}
-		
-	}
-	
+
 }

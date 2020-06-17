@@ -224,13 +224,13 @@ public class LinkedList_app {
 		}
 		
 		 endtime= System.currentTimeMillis();
-		 
+
 
 		
 		
 		System.out.println("time elapsed in removing element to the list from index 0 " + "  " + ListType + "  "  +   (endtime-starttime) + "ms");
-		
-	
+
+
 		
 		
 		
