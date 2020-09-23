@@ -11,7 +11,15 @@ class Charprint {
 		System.out.println(ch1);		//printing char value of 88  which is X
 		System.out.println(ich1); //printing int value of 88 whic is  88
 
+		//byte 1
+		//short 2
+		//int 4
+		//long 8
 
+		//char 2
+
+		//float 4
+		//double 8
 
 		int i=88;
 

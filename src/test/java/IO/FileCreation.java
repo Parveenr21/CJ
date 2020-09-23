@@ -38,8 +38,8 @@ public class FileCreation {
 		File foo1 = new File("d:\\tempo\\tempi\\lycos.txt");
 		
 		isfilecreated=foo1.createNewFile();
-		
-		
+boolean fl=foo.mkdirs();
+
 		if (isfilecreated ==true)
 		{
 			System.out.println("lycos file created succesfully");
@@ -48,13 +48,28 @@ public class FileCreation {
 			
 			System.out.println("lycos file could not be created");
 		}
-		
-		
+		try {
+			Thread.sleep(2000);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("existssss"  + foo.exists());
+
+		System.out.println("absolute existssss"  + foo.getAbsoluteFile().exists());
+
+		File ff=new File("SAmple", "one");
+
+
+		//ff.createNewFile();
+		System.out.println("ff.getAbsolutePath()");
+ff.createNewFile();
+		System.out.println("ff existssss"  + ff.exists());
+
 		/*
 		 * see listing of file in a directory
 		 * 
 		 */
-		
+		boolean flg=false;
 		
 		String list[]=foo.list();
 		
@@ -121,7 +136,7 @@ public class FileCreation {
 			System.out.println("directory could not be deleted");
 		}
 	
-	
+
 	
 	}
 	

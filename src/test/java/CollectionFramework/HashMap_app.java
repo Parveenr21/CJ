@@ -108,7 +108,7 @@ Map<String, Integer> items = new HashMap<>();
 
 		hashmapppp.forEach((k,v)->System.out.println("key : " + k + " value : " + v));
 
-
+	hashmapppp.keySet();
 
 
 		/*
@@ -129,14 +129,6 @@ Map<String, Integer> items = new HashMap<>();
 		 *
 		 *
 		 */
-
-
-
-
-
-
-
-		System.out.println("Iterator wayyyyyyyy");
 
 
 

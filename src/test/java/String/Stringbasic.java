@@ -1,6 +1,11 @@
 package String;
 
 
+import org.openqa.selenium.Platform;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 class Stringbasic{
 	
 	
@@ -69,8 +74,27 @@ class Stringbasic{
 		System.out.println("Boolean value would be " + (str1==str2)); //true
 		
 		System.out.println("Boolean value would be " + str1==str2); //false
-		
-		
+
+		System.out.println(str1.lastIndexOf("o"));
+
+
+		String s;
+		Process p;
+		String k="/Users";
+		try {
+			p = Runtime.getRuntime().exec("ls -aF " );
+			BufferedReader br = new BufferedReader(
+					new InputStreamReader(p.getInputStream()));
+			while ((s = br.readLine()) != null)
+				System.out.println("line: " + s);
+			p.waitFor();
+			System.out.println ("exit: " + p.exitValue());
+			p.destroy();
+
+
+		} catch (Exception e) {}
+
+
 		/*here in the above false resulting examplethe "Boolean value would be" + str1 is getting
 		calculated firstly and converting to String and then this new String is compared with str2
 		so it will always results in false*/

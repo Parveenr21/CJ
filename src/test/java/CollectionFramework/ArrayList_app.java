@@ -50,7 +50,7 @@ public class ArrayList_app {
 		Intlist.add(9, 15);
 		Intlist.add(12, 20);
 
-		//System.out.println(Intlist.get(0));
+		System.out.println("First element at 0 index" + Intlist.get(0));
 
 
 

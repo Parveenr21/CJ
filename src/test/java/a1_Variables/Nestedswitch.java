@@ -23,9 +23,11 @@ class Nestedswitch{
 					case 1:
 						System.out.println("PPPPPPPP");
 
-						break;
 					case 2:
 						System.out.println("XXXXXX");
+						break;
+					case 3:
+						System.out.println("OOOO");
 						break;
 				}
 			case 3:
