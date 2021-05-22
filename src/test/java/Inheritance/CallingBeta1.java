@@ -1,5 +1,7 @@
 package Inheritance;
 
+import java.util.Stack;
+
 public class CallingBeta1 {
 
 	
@@ -28,7 +30,8 @@ public class CallingBeta1 {
 		
 		B.foo_beta();
 		B.statfoo_beta();
-	
+
+
 	
 		
 		new Beta1().baapmethod1();

@@ -19,7 +19,6 @@ public class HashMap_app {
 		HashMap<Integer, String> hashmapppp  = new HashMap<Integer, String>(); //Again working on Objects.. its Integer and not int
 
 
-
 		hashmapppp.put(new Integer(0), "TestString");
 		hashmapppp.put(0, "TestString1");
 

@@ -1,9 +1,6 @@
 package CollectionFramework;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class LinkedList_app {
 
@@ -19,7 +16,8 @@ public class LinkedList_app {
 		 * like array list or linkedlist
 		 * 
 		 */
-		
+		List<Integer> list =new LinkedList<>();
+		Map<Integer,Integer> map =new HashMap<>();
 		
 		ArrayList<String> arrlist_String = new ArrayList<String>();		
 		//String typed Array list can not be pased to List<Integer> interface. Datatype  must be matched.

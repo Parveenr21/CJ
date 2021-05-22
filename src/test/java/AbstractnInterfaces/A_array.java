@@ -10,7 +10,7 @@ class A_array{
 
 		int i=0;          
 		int max=a[0];
-
+		System.out.println("length of arry"+ a.length);
 		
 		//length is final variable applicable for arrays.. by default ..it has value of length of array
 		//length() is the final method applicable for String object which has value of length of String
